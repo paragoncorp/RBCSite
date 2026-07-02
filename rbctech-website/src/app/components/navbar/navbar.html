@@ -1,0 +1,23 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="nav-container">
+    <div class="nav-logo" (click)="scrollTo('hero')">
+      <div class="logo-icon"><span>R</span></div>
+      <div class="logo-text">
+        <span class="logo-main">RBCTech</span>
+        <span class="logo-sub">Corporation</span>
+      </div>
+    </div>
+
+    <ul class="nav-links" [class.open]="mobileOpen()">
+      <li><a (click)="scrollTo('about')">About</a></li>
+      <li><a (click)="scrollTo('services')">Services</a></li>
+      <li><a (click)="scrollTo('founders')">Leadership</a></li>
+      <li><a (click)="scrollTo('contact')">Contact</a></li>
+      <li><button class="btn-nav" (click)="scrollTo('contact')">Get Started</button></li>
+    </ul>
+
+    <button class="hamburger" (click)="toggleMobile()" [class.open]="mobileOpen()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

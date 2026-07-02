@@ -1,0 +1,32 @@
+<section id="founders" class="founders">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Leadership</span>
+      <h2 class="section-title">Meet the <span>Visionaries</span></h2>
+      <p class="section-subtitle">
+        Three leaders united by a shared vision — to build technology that makes a difference.
+      </p>
+    </div>
+
+    <div class="founders-grid">
+      @for (founder of founders; track founder.name) {
+        <div class="founder-card">
+          <div class="founder-avatar" [style.background]="'linear-gradient(135deg, ' + founder.color + '22, ' + founder.color + '44)'">
+            <span class="avatar-initials" [style.color]="founder.color">{{ founder.initials }}</span>
+            <div class="avatar-ring" [style.border-color]="founder.color + '55'"></div>
+          </div>
+          <div class="founder-info">
+            <h3 class="founder-name">{{ founder.name }}</h3>
+            <span class="founder-title">{{ founder.title }}</span>
+            <p class="founder-bio">{{ founder.bio }}</p>
+            <div class="founder-skills">
+              @for (skill of founder.skills; track skill) {
+                <span class="skill-tag">{{ skill }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
