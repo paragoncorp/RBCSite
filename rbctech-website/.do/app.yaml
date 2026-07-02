@@ -1,9 +1,0 @@
-name: rbctech-website
-static_sites:
-  - name: rbctech-website
-    build_command: npm run build
-    output_dir: dist/rbctech-website/browser
-    environment_slug: node-js
-    github:
-      branch: main
-      deploy_on_push: true
